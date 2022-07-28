@@ -24,7 +24,7 @@ st.markdown('''
 st.image("audience-segmentation-concept-man-near-a-large-circular-chart-with-images-of-people-illustration-flat-vector.jpg")
 
 st.markdown('''
-## **Customer Segmentation** is the process of division of a customer base into several groups.
+#### **Customer Segmentation** is the process of division of a customer base into several groups.
 ''')
 
 st.write("📊  These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.")
