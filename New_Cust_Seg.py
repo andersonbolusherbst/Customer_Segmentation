@@ -481,7 +481,7 @@ st.write("📊  Once your company understands the characteristics of these 'clus
 st.write("📊  This customer segmentation will be completed on our **Mall Dataset**")
 
 if st.button('Press me for Customer Segmentation'):
-@st.cache(allow_output_mutation=True)
+        @st.cache(allow_output_mutation=True)
 def load_data():
     a = pd.read_csv("Mall_Customers.csv")
     return a
