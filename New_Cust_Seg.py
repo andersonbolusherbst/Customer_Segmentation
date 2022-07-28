@@ -27,12 +27,9 @@ st.markdown('''
 ##### Customer Segmentation is the process of division of a customer base into several groups.
 ''')
 
-st.write(''' ##### These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.''')
-st.write(''' ##### Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers''')
-st.write(''' ##### This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle''')
+st.subheader("These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits. Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers")
+st.subheader("This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle")
 
-link_dataset = '[Mall Dataset](https://kaggle.com)'
-st.markdown(link_dataset, unsafe_allow_html=True)
 
 if st.button('Press me for Customer Segmentation'):
         @st.cache(allow_output_mutation=True)
