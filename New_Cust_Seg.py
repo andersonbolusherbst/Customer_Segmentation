@@ -15,7 +15,7 @@ from matplotlib import pyplot
 from numpy import arange
 from bokeh.models.widgets import Div
 
-st.markdown("<h1 style='text-align: center; color: grey;'>Customer Segmentation</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Customer Segmentation</h1>", unsafe_allow_html=True)
 
 st.image("audience-segmentation-concept-man-near-a-large-circular-chart-with-images-of-people-illustration-flat-vector.jpg")
 
