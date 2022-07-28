@@ -106,7 +106,7 @@ if st.button('Press me for Customer Segmentation'):
         centroids3 = algorithm.cluster_centers_
 
         st.subheader("3D Customer Segmentation")
-        st.write("Feel free to play around with our 3D segmentation. If its a little confusing dont worry we provide further insights below!")
+        st.write("**Feel free to play around with our 3D segmentation**. If it's a little confusing dont worry we provide further insights below!")
         df['label3'] =  labels3
         trace1 = go.Scatter3d(
                     x= df['Age'],
@@ -229,6 +229,8 @@ if st.button('Press me for Customer Segmentation'):
         | 6 | **Least Valuable** | Customers to direct marketing away from |
 
         """)
+        
+        st.write("")
 
         st.write(" It is important to remember that these rankings and recommendations are our thanks to **HAB LABS** expertise and experience. Customer segmentation is subjective by nature.")
 
@@ -310,6 +312,11 @@ if st.button('Press me for Customer Segmentation'):
         st.pyplot(fig)
 
         st.write("---")
+        
+        st.subheader("Prescriptive Insights")
+        
+        st.write("In this case the best course of action given the avaliable data would be to target ad spend to consumers who fall into the TARGET CLUSTER.")
+        st.write("This cluster, in large part, is made up of Men")
 
         st.markdown('''
         # **FREE CONSULTATION**
