@@ -3,13 +3,10 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.graph_objs as go
 from sklearn.cluster import KMeans
-import sweetviz as sv
 import streamlit.components.v1 as components
 import codecs
 from streamlit_plotly_events import plotly_events
@@ -27,9 +24,9 @@ st.markdown('''
 ##### Customer Segmentation is the process of division of a customer base into several groups.
 ''')
 
-st.markdown('''##### These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.''')
-st.markdown('''##### Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers''')
-st.markdown('''##### This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle''')
+st.markdown('''##### ✔️ These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.''')
+st.markdown('''##### ✔️ Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers''')
+st.markdown('''##### ✔️ This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle''')
 
 
 if st.button('Press me for Customer Segmentation'):
@@ -57,8 +54,8 @@ if st.button('Press me for Customer Segmentation'):
         plt.ylabel("Distortion Score")
         st.pyplot(fig)
 
-        st.write("📊 The first step in any customer segmentation is to work out the optimal number of groups of customers or 'clusters'") 
-        st.write("📊 Following the implementation of a KMeans algorithm, the above graph shows us that in this case the optimal number of clusters is **SIX**")
+        st.write(" The first step in any customer segmentation is to work out the optimal number of groups of customers or 'clusters'") 
+        st.write(" Following the implementation of a KMeans algorithm, the above graph shows us that in this case the optimal number of clusters is **SIX**")
 
         st.write("---")
         #----Creating Segemenation Illustration
@@ -89,9 +86,9 @@ if st.button('Press me for Customer Segmentation'):
         plt.ylabel("Spending Score (1-100)")
         st.pyplot(fig)
 
-        st.markdown(''' ##### Machine learning models are powerful decision-making tools. They can precisely identify customer segments, which is much harder to do manually or with conventional analytical methods.''')
-        st.markdown(''' #####  Above ⬆︎ we can see a visual representation of a customer segmentation on our MALL DATASET''')
-        st.markdown(''' ##### In this case the clusters have been segmented based on Age and Spending Score into 6 seperate groups''')
+        st.write(" Machine learning models are powerful decision-making tools. They can precisely identify customer segments, which is much harder to do manually or with conventional analytical methods.")
+        st.write(" Above ⬆︎ we can see a visual representation of a customer segmentation on our MALL DATASET")
+        st.write(" In this case the clusters have been segmented based on Age and Spending Score into 6 seperate groups")
 
         ##### 3D Vis
         X3 = df[['Age' , 'Annual Income (k$)' ,'Spending Score (1-100)']].iloc[: , :].values
@@ -109,7 +106,7 @@ if st.button('Press me for Customer Segmentation'):
         centroids3 = algorithm.cluster_centers_
 
         st.subheader("3D Customer Segmentation")
-        st.markdown(''' #####  Feel free to play around with our 3D segmentation. If its a little confusing dont worry we provide further insights below!''')
+        st.write("Feel free to play around with our 3D segmentation. If its a little confusing dont worry we provide further insights below!")
         df['label3'] =  labels3
         trace1 = go.Scatter3d(
                     x= df['Age'],
@@ -148,7 +145,7 @@ if st.button('Press me for Customer Segmentation'):
 
         ####---- Extra work to make the below work!
         st.subheader("Customer Segmentation Insights")
-        st.write("📊  For the following graphics please press the ⤡ button for a better view!")
+        
         X3 = df[['Age' , 'Annual Income (k$)' ,'Spending Score (1-100)']].iloc[: , :].values
         inertia = []
         for n in range(1 , 11):
@@ -233,7 +230,7 @@ if st.button('Press me for Customer Segmentation'):
 
         """)
 
-        st.write("📊  It is important to remember that these rankings and recommendations are our thanks to **HAB LABS** expertise and experience. Customer segmentation is subjective by nature.")
+        st.write(" It is important to remember that these rankings and recommendations are our thanks to **HAB LABS** expertise and experience. Customer segmentation is subjective by nature.")
 
         st.write("---")
 
