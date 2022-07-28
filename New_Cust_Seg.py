@@ -476,7 +476,6 @@ st.markdown('''
 **Customer Segmentation** is the process of division of a customer base into several groups.
 ''')
 
-st.image("too-broad-customer-segmentation.jpeg")
 st.write("📊  These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.")
 st.write("📊  Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers")
 st.write("📊  This customer segmentation will be completed on our **Mall Dataset**")
@@ -762,8 +761,6 @@ fig.text(0.827,0.98,"Female", fontweight="bold", fontfamily='serif', fontsize=18
 st.pyplot(fig)
 
 st.write("---")
-
-st.image("Heatmap.png")
 
 st.markdown('''
 # **FREE CONSULTATION**
