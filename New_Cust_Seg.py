@@ -21,12 +21,12 @@ st.markdown('''
 st.image("audience-segmentation-concept-man-near-a-large-circular-chart-with-images-of-people-illustration-flat-vector.jpg")
 
 st.markdown('''
-##### Customer Segmentation is the process of division of a customer base into several groups.
+#### ✔️ Customer Segmentation is the process of division of a customer base into several groups.
 ''')
 
-st.markdown('''##### ✔️ These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.''')
-st.markdown('''##### ✔️ Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers''')
-st.markdown('''##### ✔️ This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle''')
+st.markdown('''#### ✔️ These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.''')
+st.markdown('''#### ✔️ Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers''')
+st.markdown('''#### ✔️ This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle''')
 
 
 if st.button('Press me for Customer Segmentation'):
