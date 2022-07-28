@@ -24,12 +24,12 @@ st.markdown('''
 st.image("audience-segmentation-concept-man-near-a-large-circular-chart-with-images-of-people-illustration-flat-vector.jpg")
 
 st.markdown('''
-#### **Customer Segmentation** is the process of division of a customer base into several groups.
+#### **Customer Segmentation** is the process of division of a customer base into several groups**.
 ''')
 
-st.write("📊  These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.")
-st.write("📊  Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers")
-st.write("📊  This customer segmentation will be completed on our **Mall Dataset**")
+st.write(''' ### **These groups share similarities that are relevant to marketing such as gender, age, annual income and spending habits.**''')
+st.write(''' ### **Once your company understands the characteristics of these 'clusters' of clients you can divert your ad budget away from those who are unlikely to purchase your product or service towards your most valuable customers**''')
+st.write(''' ### **This customer segmentation will be completed on our Mall Dataset**''')
 
 if st.button('Press me for Customer Segmentation'):
         @st.cache(allow_output_mutation=True)
