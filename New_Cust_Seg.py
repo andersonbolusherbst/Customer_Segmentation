@@ -310,19 +310,22 @@ if st.button('Press me for Customer Segmentation'):
         fig.text(0.819,0.98,"|", fontweight="bold", fontfamily='serif', fontsize=18, color='black')
         fig.text(0.827,0.98,"Female", fontweight="bold", fontfamily='serif', fontsize=18, color='coral')
         st.pyplot(fig)
+        
+        st.image("Heatmap.png")
 
         st.write("---")
         
         st.subheader("Prescriptive Insights")
         
         st.write("In this case the best course of action given the avaliable data would be to target ad spend to consumers who fall into the TARGET CLUSTER.")
-        st.write("This cluster, in large part, is made up of Men")
+        st.write("This cluster, in large part, is made up of Men between the ages of and . These men have an average disposable income of annually and ")
+        st.write("If you were to collect more extensive data from these customers such as: Number of Dependants, Job Title, Home Address tec. you can begin to build a more sophisticated profile and target these customer more effectively.")
 
         st.markdown('''
-        # **FREE CONSULTATION**
+        # **HAB LABS - DATA SCIENCE AND MACHINE LEARNING SOLUTIONS**
         If you like what you see what else we can do at HAB LABS visit:
         ''')
-        link = '[Free Consultation](https://hablabs.tech)'
+        link = '[Learn More](https://hablabs.tech)'
         st.markdown(link, unsafe_allow_html=True)
         
          
