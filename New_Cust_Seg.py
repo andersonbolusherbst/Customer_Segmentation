@@ -32,7 +32,7 @@ st.write(''' ##### Once your company understands the characteristics of these 'c
 st.write(''' ##### This customer segmentation will be completed on customer data from the popular MALL DATASET on Kaggle''')
 
 link_dataset = '[Mall Dataset](https://kaggle.com)'
-        st.markdown(link, unsafe_allow_html=True)
+st.markdown(link, unsafe_allow_html=True)
 
 if st.button('Press me for Customer Segmentation'):
         @st.cache(allow_output_mutation=True)
