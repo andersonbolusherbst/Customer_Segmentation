@@ -163,8 +163,6 @@ if st.button('Press me for Customer Segmentation'):
 
         st.write("It is important to remember that these rankings and recommendations are thanks to **HAB LABS** expertise and experience. Customer segmentation is subjective by nature.")
 
-        st.subheader("Customer Segmentation Insights")
-        st.write("📊  For the following graphics please press the ⤡ button for a better view!")
         X3 = df[['Age' , 'Annual Income (k$)' ,'Spending Score (1-100)']].iloc[: , :].values
         inertia = []
         for n in range(1 , 11):
