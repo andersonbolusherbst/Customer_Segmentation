@@ -329,7 +329,11 @@ if st.button('Press me for Customer Segmentation'):
         link = '[HIT ME!](https://hablabs.tech)'
         st.write(link,unsafe_allow_html=True)
         
-         
+        st.markdown(
+        """<a style='display: block; text-align: center;' href="https://hablabs.tech/">HIT ME!</a>
+        """,
+        unsafe_allow_html=True,
+        ) 
             
         
 
