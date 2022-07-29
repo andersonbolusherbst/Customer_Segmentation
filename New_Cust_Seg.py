@@ -146,87 +146,16 @@ if st.button('Press me for Customer Segmentation'):
         ####---- Extra work to make the below work!
         st.markdown("<h2 style='text-align: center; color: black;'>Customer Segmentation: Visual Insights</h2>", unsafe_allow_html=True)
         
-        X3 = df[['Age' , 'Annual Income (k$)' ,'Spending Score (1-100)']].iloc[: , :].values
-        inertia = []
-        for n in range(1 , 11):
-            algorithm = (KMeans(n_clusters = n ,init='k-means++', n_init = 10 ,max_iter=300, 
-                            tol=0.0001,  random_state= 111  , algorithm='elkan') )
-            algorithm.fit(X3)
-            inertia.append(algorithm.inertia_)
-
-        algorithm = (KMeans(n_clusters = 6 ,init='k-means++', n_init = 10 ,max_iter=300, 
-                            tol=0.0001,  random_state= 111  , algorithm='elkan') )
-        algorithm.fit(X3)
-        labels3 = algorithm.labels_
-        centroids3 = algorithm.cluster_centers_
-
-        df['label3'] =  labels3
-
-
-        df4 = df.copy()
-        df4.rename(columns ={"label3":"Cluster"}, inplace = True)
-
-        grouped_km = df4.groupby(['Cluster']).mean().round(1)
-        grouped_km2 = df4.groupby(['Cluster']).mean().round(1).reset_index()
-        grouped_km2['Cluster'] = grouped_km2['Cluster'].map(str)
-        grouped_km2.drop(columns =["CustomerID"], inplace = True)
-
-        fig = plt.figure(figsize=(10,10))
-        ax = fig.add_subplot(111, projection='3d')
-        ax.scatter(grouped_km2["Spending Score (1-100)"], grouped_km2["Annual Income (k$)"], grouped_km2["Age"],color=['yellow','red','green','orange','blue','purple'],alpha=0.5,s=500)
-
-        # add annotations one by one with a loop
-        for line in range(0,grouped_km.shape[0]):
-            ax.text(grouped_km2['Spending Score (1-100)'][line], grouped_km2['Annual Income (k$)'][line],grouped_km2['Age'][line], s=('Cluster \n'+grouped_km2['Cluster'][line]), horizontalalignment='center', fontsize=12, fontweight='light', fontfamily='serif')
-
-        ax.set_xlabel("Spending Score (1-100)", fontsize = 12)
-        ax.set_ylabel("Annual Income (k$)",fontsize = 12)
-        ax.set_zlabel("Age", fontsize = 12)
-
-        fig.text(0.15, .95, '3D Plot: Clusters Visualized', fontsize=20, fontweight='bold', fontfamily='sans-serif')
-        fig.text(0.15, .9, 'Clusters by averages in 3D.', fontsize=15, fontweight='light', fontfamily='sans-serif')
-
-        fig.text(1.172, 0.95, 'Insight', fontsize=20, fontweight='bold', fontfamily='sans-serif')
-
-        fig.text(1.172, 0.3, '''
-        We observe a clear distinction between clusters. 
-
-        As a business, we might want to rename our clusters
-        so that they have a clear & obvious meaning; right now
-        the cluster labels mean nothing. 
-
-        Let's change that:
-
-        Cluster 0 - Middle spending score, Middle income, High age - Valuable
-
-        Cluster 1 - High spending score, High income, Young age - Most Valuable
-
-        Cluster 2 - Lowest spending score, High income, High age - Less Valuable
-
-        Cluster 3 - High spending score, Low income, Young age - Very Valuable.
-
-        Cluster 4 - Low spending score, Low income, High age - Least Valuable
-
-        Cluster 5 - Middle spending score, Middle income, Young age - Targets.
-        '''
-                , fontsize=20, fontweight='light', fontfamily='sans-serif')
-
-        import matplotlib.lines as lines
-        l1 = lines.Line2D([1, 1], [0, 1], transform=fig.transFigure, figure=fig,color='black',lw=0.2)
-        fig.lines.extend([l1])
-        #st.pyplot(fig)
-
-
         st.markdown(
            """
-        | Rank | Order of Importance (Customer Segmentation) | Recommendations |
+        | Rank | Order of Importance - Clusters | Recommendations |
         | --- | --- | --- |
         | 1 | **Targets** |  Untapped potential. Customers with massive upside if targeted correctly |
-        | 2 | **Most Valuable** | High priority customers. "Whales" |
-        | 3 | **Very Valuable** | Priority customers |
-        | 4 | **Valuable** | Customers that should be maintained |
-        | 5 | **Less Valuable** | Customers to pay less attention to |
-        | 6 | **Least Valuable** | Customers to direct marketing away from |
+        | 2 | **Most Valuable** | High priority customers. |
+        | 3 | **Very Valuable** | Priority customers. |
+        | 4 | **Valuable** | Customers that should be maintained. |
+        | 5 | **Less Valuable** | Customers to pay less attention to. |
+        | 6 | **Least Valuable** | Customers to direct marketing away from. |
 
         """)
         
@@ -326,8 +255,6 @@ if st.button('Press me for Customer Segmentation'):
         
         st.markdown("<h2 style='text-align: center; color: black;'>HAB LABS: Data Science and Machine Learning Solutions</h2>", unsafe_allow_html=True)
         st.markdown("<h4 style='text-align: center; color: black;'>If you would like to learn more hit the link below!</h4>", unsafe_allow_html=True)
-        link = '[HIT ME!](https://hablabs.tech)'
-        st.write(link,unsafe_allow_html=True)
         
         st.markdown(
         """<a style='display: block; text-align: center;' href="https://hablabs.tech/">HIT ME!</a>
