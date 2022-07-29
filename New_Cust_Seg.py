@@ -45,7 +45,7 @@ if st.button('Press me for Customer Segmentation'):
             inertia.append(algorithm.inertia_)
 
         #-- Plotting Kmeans Elbow
-        st.subheader("KMeans Elbow")
+        st.markdown("<h2 style='text-align: center; color: black;'>KMeans Elbow Method</h2>", unsafe_allow_html=True)
         fig, ax = plt.subplots()
         plt.plot(np.arange(1 , 11) , inertia , 'o')
         plt.plot(np.arange(1 , 11) , inertia , '-' , alpha = 0.5)
@@ -70,7 +70,8 @@ if st.button('Press me for Customer Segmentation'):
         xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
         Z = algorithm.predict(np.c_[xx.ravel(), yy.ravel()]) 
 
-        st.header("Customer Segmentation: Age and Spending Score")
+        
+        st.markdown("<h2 style='text-align: center; color: black;'>Customer Segmentation: Age and Spending Score</h2>", unsafe_allow_html=True)
         fig, ax = plt.subplots()
         plt.clf()
         Z = Z.reshape(xx.shape)
@@ -104,7 +105,7 @@ if st.button('Press me for Customer Segmentation'):
         labels3 = algorithm.labels_
         centroids3 = algorithm.cluster_centers_
 
-        st.subheader("3D Customer Segmentation")
+        st.markdown("<h2 style='text-align: center; color: black;'>3D Customer Segmentation</h2>", unsafe_allow_html=True)
         st.write("**Feel free to play around with our 3D segmentation**. If it's a little confusing dont worry we provide further insights below!")
         df['label3'] =  labels3
         trace1 = go.Scatter3d(
@@ -143,7 +144,7 @@ if st.button('Press me for Customer Segmentation'):
         st.write("---")
 
         ####---- Extra work to make the below work!
-        st.subheader("Customer Segmentation Insights")
+        st.markdown("<h2 style='text-align: center; color: black;'>Customer Segmentation: Visual Insights</h2>", unsafe_allow_html=True)
         
         X3 = df[['Age' , 'Annual Income (k$)' ,'Spending Score (1-100)']].iloc[: , :].values
         inertia = []
@@ -314,7 +315,7 @@ if st.button('Press me for Customer Segmentation'):
 
         st.write("---")
         
-        st.subheader("Prescriptive Insights")
+        st.markdown("<h2 style='text-align: center; color: black;'>Customer Segmentation: Prescriptive Insights</h2>", unsafe_allow_html=True)
         
         st.write("In this case the best course of action given the avaliable data would be to target ad spend to consumers who fall into the TARGET CLUSTER.")
         st.write("This cluster, in large part, is made up of Men around the age of 42. These men have an average income of $88 000 annually and a low spending score of 17 out of 100.")
@@ -322,11 +323,8 @@ if st.button('Press me for Customer Segmentation'):
 
         st.write("---")
         
-        st.markdown('''
-        ### **HAB LABS - DATA SCIENCE AND MACHINE LEARNING SOLUTIONS**
-        ''')
-        st.markdown('''
-        #### If you would like to learn more, visit our site below!''')
+        st.markdown("<h2 style='text-align: center; color: black;'>HAB LABS: Data Science and Machine Learning Solutions</h2>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: left; color: black;'>HAB LABS: Data Science and Machine Learning Solutions</h3>", unsafe_allow_html=True)
         link = '[Learn More](https://hablabs.tech)'
         st.markdown(link, unsafe_allow_html=True)
         
