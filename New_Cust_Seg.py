@@ -161,9 +161,9 @@ if st.button('Press me for Customer Segmentation'):
         
         st.write("")
 
-        st.write(" It is important to remember that these rankings and recommendations are thanks to **HAB LABS** expertise and experience. Customer segmentation is subjective by nature.")
+        st.write("It is important to remember that these rankings and recommendations are thanks to **HAB LABS** expertise and experience. Customer segmentation is subjective by nature.")
 
-        
+        #####HERE
 
         #Percentages BarPlot by Gender
 
