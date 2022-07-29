@@ -319,14 +319,15 @@ if st.button('Press me for Customer Segmentation'):
         
         st.write("In this case the best course of action given the avaliable data would be to target ad spend to consumers who fall into the TARGET CLUSTER.")
         st.write("This cluster, in large part, is made up of Men around the age of 42. These men have an average income of $88 000 annually and a low spending score of 17 out of 100.")
-        st.write("If you were to collect more extensive data from these customers such as: Number of Dependants, Job Title, Home Address tec. you can begin to build a more sophisticated profile and target these customer more effectively.")
+        st.write("How might we encourage more male customers? Incentive programs for females in the Targets cluster?")
+        st.write("If you were to collect more extensive data from these customers such as: Number of Dependants, Job Title, Home Address etc. you can begin to build a more sophisticated profile and target these customer more effectively.")
 
         st.write("---")
         
         st.markdown("<h2 style='text-align: center; color: black;'>HAB LABS: Data Science and Machine Learning Solutions</h2>", unsafe_allow_html=True)
         st.markdown("<h4 style='text-align: center; color: black;'>If you would like to learn more hit the link below!</h4>", unsafe_allow_html=True)
         link = '[HIT ME!](https://hablabs.tech)'
-        st.markdown("<h4 style='text-align: center;color black;'<link>/h4>", unsafe_allow_html=True)
+        st.markdown(link,unsafe_allow_html=True)
         
          
             
