@@ -327,7 +327,7 @@ if st.button('Press me for Customer Segmentation'):
         st.markdown("<h2 style='text-align: center; color: black;'>HAB LABS: Data Science and Machine Learning Solutions</h2>", unsafe_allow_html=True)
         st.markdown("<h4 style='text-align: center; color: black;'>If you would like to learn more hit the link below!</h4>", unsafe_allow_html=True)
         link = '[HIT ME!](https://hablabs.tech)'
-        st.markdown(link,unsafe_allow_html=True)
+        st.write(link,unsafe_allow_html=True)
         
          
             
